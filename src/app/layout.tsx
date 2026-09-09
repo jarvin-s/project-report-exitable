@@ -20,7 +20,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
     return (
-        <html lang='en' className={`${dmSans.className} ${anton.variable}`}>
+        <html
+            lang='en'
+            className={`${dmSans.className} ${anton.variable} scroll-smooth`}
+        >
             <body>{children}</body>
         </html>
     )
