@@ -15,7 +15,7 @@ const anton = Anton({
 
 export const metadata: Metadata = {
     title: 'Project Report Exitable - Jarvin Siegers',
-    description: "Jarvin's project report for the internship at Exitable",
+    description: "Jarvin's Project Report for the internship at Exitable",
 }
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
