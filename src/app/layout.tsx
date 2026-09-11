@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { DM_Sans, Anton } from 'next/font/google'
 import './globals.css'
+import Head from 'next/head'
 
 const dmSans = DM_Sans({
     subsets: ['latin'],
@@ -8,7 +9,7 @@ const dmSans = DM_Sans({
 })
 
 const anton = Anton({
-    subsets:['latin'],
+    subsets: ['latin'],
     weight: ['400'],
     variable: '--font-anton',
 })
@@ -24,6 +25,12 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
             lang='en'
             className={`${dmSans.className} ${anton.variable} scroll-smooth`}
         >
+            <Head>
+                <meta
+                    name='viewport'
+                    content='width=device-width, initial-scale=1.0'
+                />
+            </Head>
             <body>{children}</body>
         </html>
     )

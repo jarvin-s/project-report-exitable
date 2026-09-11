@@ -1,10 +1,18 @@
+'use client'
+
 import Image from 'next/image'
-// import AnimatedGradient from '@/components/animated-gradient'
+import { Gradient } from'@/lib/Gradient'
+import { useEffect } from 'react'
 
 export default function Hero() {
+    useEffect(() => {
+        const gradient = new Gradient()
+        // @ts-ignore
+        gradient.initGradient('#gradient-canvas')
+    }, [])
     return (
         <section className='relative isolate flex min-h-[70vh] flex-col items-center justify-center overflow-hidden px-6 py-16 sm:min-h-[75vh] sm:px-10 sm:py-20 md:px-16 md:py-32 lg:px-40 lg:py-40'>
-            {/* <AnimatedGradient /> */}
+            <canvas id='gradient-canvas' data-transition-in className='absolute inset-0 -z-10'/>
             <div className='relative z-10 flex w-full max-w-4xl flex-col items-center justify-center'>
                 <Image
                     src='/exitable-logo.jpeg'
@@ -29,22 +37,6 @@ export default function Hero() {
                     loading='eager'
                 />
             </div>
-            <div className='absolute inset-0 -z-10'>
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload='auto'
-                    className='size-full object-cover object-center'
-                >
-                    <source
-                        src='/videos/hero-gradient.webm'
-                        type='video/webm'
-                    />
-                    <source src='/videos/hero-gradient.mp4' type='video/mp4' />
-                </video>
-            </div>
-        </section>
+            </section>
     )
 }

@@ -10,16 +10,13 @@ export default function Home() {
     return (
         <>
             <Hero />
-            <Spacer />
-            <Content/>
-            <Spacer />
+            {/* <Spacer /> */}
+            <Content />
+            {/* <Spacer /> */}
             <Assignment />
-            <Spacer />
-            <Description/>
-            <Spacer />
-            <ConclusionRecommendation/>
-            <Spacer />
-            <Reflection/>
+            <Description />
+            <ConclusionRecommendation />
+            <Reflection />
         </>
     )
 }

@@ -2,22 +2,19 @@ import Link from 'next/link'
 
 export default function Assignment() {
     return (
-        <section id='assignment' className='mt-10 scroll-mt-8'>
-            <div className='flex flex-col items-center justify-center'>
+        <section id='assignment' className='scroll-mt-8'>
+            <div className='flex flex-col items-center p-4'>
                 <h1 className='header-text text-6xl font-bold'>
                     The Assignment
                 </h1>
                 <div className='flex max-w-2xl flex-col gap-4'>
-                    <p className='mt-4 px-2 text-center text-lg md:px-0 md:text-left'>
-                        The assignment is to build a headless frontend what
-                        works with Craft CMS and integrates with GraphQL,
-                        preferably with a familiar stack.
-                    </p>
-                    <p className='px-2 text-center text-lg md:px-0 md:text-left'>
-                        I was looking for a middle ground between
-                        content-driven websites and fully headless web
-                        applications: a hybrid stack that combines the
-                        flexibility of{' '}
+                    <h2 className='mt-4 px-2 text-2xl font-bold md:px-0'>
+                        Description
+                    </h2>
+                    <p className='px-2 text-lg md:px-0 md:text-left'>
+                        For my internship at Exitable, I will research and
+                        demonstrate how to set up a modern, headless frontend
+                        architecture that communicates with{' '}
                         <Link
                             href='https://craftcms.com/'
                             target='_blank'
@@ -26,13 +23,7 @@ export default function Assignment() {
                         >
                             Craft CMS
                         </Link>{' '}
-                        with the interactivity of a modern frontend.
-                    </p>
-
-                    <p className='px-2 text-center text-lg md:px-0 md:text-left'>
-                        The solution was a hybrid architecture using Craft CMS
-                        for content management and a modern frontend connected
-                        through{' '}
+                        via{' '}
                         <Link
                             href='https://graphql.org/'
                             target='_blank'
@@ -41,9 +32,66 @@ export default function Assignment() {
                         >
                             GraphQL
                         </Link>
-                        . This allowed me to keep the strengths of Craft while
-                        giving the frontend the freedom and flexibility needed
-                        for richer interactive experiences.
+                        . I will also explore a frontend solution that fits
+                        Exitable&apos;s requirements, using CMS Starter as the
+                        API layer.
+                    </p>
+
+                    <h2 className='mt-2 px-2 text-2xl font-bold md:px-0'>
+                        Problem & opportunity
+                    </h2>
+                    <p className='px-2 text-lg md:px-0 md:text-left'>
+                        Exitable currently builds websites in two ways:
+                        Content-driven sites use Craft CMS as a monolith with
+                        TypeScript and Twig, focused on design, SEO and content
+                        management. Headless webapps use Laravel with Vue or
+                        Nuxt: separate frontend and backend apps connected
+                        through a REST API, suited for complex workflows like
+                        advanced calculators.
+                    </p>
+                    <p className='px-2 text-lg md:px-0 md:text-left'>
+                        More and more Exitable gets clients that want a hybrid
+                        approach. Clients want a visual website with strong
+                        branding and content managed in Craft CMS, combined with
+                        interactive components like dynamic product filters,
+                        dealer maps and calculation tools.
+                    </p>
+                    <p className='px-2 text-lg md:px-0 md:text-left'>
+                        In Exitable&apos;s monolithic Craft CMS setup, the
+                        frontend often hits limits on interactivity. Interactive
+                        components can be added, but integration is difficult,
+                        hard to align with UI and branding, and difficult to
+                        maintain. The Laravel webapp stack offers more room for
+                        interactivity, but weaker content management than Craft
+                        CMS, and using a REST API for content is time intensive.
+                    </p>
+                    <p className='px-2 text-lg md:px-0 md:text-left'>
+                        That is why Exitable is looking for a solution: a hybrid
+                        stack. My assignment is to research and validate that
+                        approach as a reusable blueprint for future projects.
+                    </p>
+
+                    <h2 className='mt-2 px-2 text-2xl font-bold md:px-0'>
+                        Goals
+                    </h2>
+                    <p className='px-2 text-lg md:px-0 md:text-left'>
+                        My goal is to deliver a reusable Proof of Concept that
+                        Exitable can use as a blueprint for new hybrid projects.
+                        I will meet the essential baseline criteria for the
+                        frontend solution. If I have enough time, I will also
+                        work toward optional bonus goals.
+                    </p>
+
+                    <h2 className='mt-2 px-2 text-2xl font-bold md:px-0'>
+                        Context
+                    </h2>
+                    <p className='px-2 text-lg md:px-0 md:text-left'>
+                        Craft CMS is well suited for headless setups, and
+                        GraphQL is a standard feature. Exitable&apos;s projects
+                        use CMS Starter, a base Craft CMS installation with the
+                        company&apos;s best practices. Craft version 6 releases
+                        later this year, however for this assignment I will use
+                        version 5.
                     </p>
                 </div>
             </div>
