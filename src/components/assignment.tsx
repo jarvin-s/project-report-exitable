@@ -12,9 +12,9 @@ export default function Assignment() {
                         Description
                     </h2>
                     <p className='px-2 text-lg md:px-0 md:text-left'>
-                        For my internship at Exitable, I will research and
-                        demonstrate how to set up a modern, headless frontend
-                        architecture that communicates with{' '}
+                        For my internship at Exitable, I will research and build
+                        a modern, headless frontend solution that communicates
+                        with{' '}
                         <Link
                             href='https://craftcms.com/'
                             target='_blank'
@@ -66,7 +66,7 @@ export default function Assignment() {
                         CMS, and using a REST API for content is time intensive.
                     </p>
                     <p className='px-2 text-lg md:px-0 md:text-left'>
-                        That is why Exitable is looking for a solution: a hybrid
+                        That&apos;s why Exitable is looking for a solution: a hybrid
                         stack. My assignment is to research and validate that
                         approach as a reusable blueprint for future projects.
                     </p>

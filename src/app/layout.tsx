@@ -24,6 +24,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         <html
             lang='en'
             className={`${dmSans.className} ${anton.variable} scroll-smooth`}
+            suppressHydrationWarning={true}
         >
             <Head>
                 <meta
