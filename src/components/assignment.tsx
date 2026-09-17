@@ -83,7 +83,7 @@ export default function Assignment() {
                         <h2 className='mt-2 px-2 text-2xl font-bold md:px-0'>
                             Problem & opportunity
                         </h2>
-                        <p className='px-2 text-lg md:px-0 md:text-left'>
+                        <p className='px-2 text-lg mb-4 md:px-0 md:text-left'>
                             Exitable currently builds websites in two ways:
                             Content-driven sites use Craft CMS as a monolith
                             with TypeScript and Twig, focused on design, SEO and
@@ -92,14 +92,14 @@ export default function Assignment() {
                             connected through a REST API, suited for complex
                             workflows like advanced calculators.
                         </p>
-                        <p className='px-2 text-lg md:px-0 md:text-left'>
+                        <p className='px-2 text-lg mb-4 md:px-0 md:text-left'>
                             More and more Exitable gets clients that want a
                             hybrid approach. Clients want a visual website with
                             strong branding and content managed in Craft CMS,
                             combined with interactive components like dynamic
                             product filters, dealer maps and calculation tools.
                         </p>
-                        <p className='px-2 text-lg md:px-0 md:text-left'>
+                        <p className='px-2 text-lg mb-4 md:px-0 md:text-left'>
                             In Exitable&apos;s monolithic Craft CMS setup, the
                             frontend often hits limits on interactivity.
                             Interactive components can be added, but integration
