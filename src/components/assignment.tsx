@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 import { createTimeline, stagger } from 'animejs'
 import { onScroll } from 'animejs/events'
@@ -49,7 +48,7 @@ export default function Assignment() {
                         duration: 800,
                         delay: stagger(150),
                     },
-                    '-=500',
+                    '-=500'
                 )
         })
 
@@ -73,25 +72,8 @@ export default function Assignment() {
                         <p className='px-2 text-lg md:px-0 md:text-left'>
                             For my internship at Exitable, I will research and
                             build a modern, headless frontend solution that
-                            communicates with{' '}
-                            <Link
-                                href='https://craftcms.com/'
-                                target='_blank'
-                                rel='noreferrer'
-                                className='text-blue-500 hover:text-blue-600 hover:underline'
-                            >
-                                Craft CMS
-                            </Link>{' '}
-                            via{' '}
-                            <Link
-                                href='https://graphql.org/'
-                                target='_blank'
-                                rel='noreferrer'
-                                className='text-blue-500 hover:text-blue-600 hover:underline'
-                            >
-                                GraphQL
-                            </Link>
-                            . I will also explore a frontend solution that fits
+                            communicates with Craft CMS via GraphQL. I will
+                            also explore a frontend solution that fits
                             Exitable&apos;s requirements, using CMS Starter as
                             the API layer.
                         </p>
@@ -128,8 +110,8 @@ export default function Assignment() {
                             API for content is time intensive.
                         </p>
                         <p className='px-2 text-lg md:px-0 md:text-left'>
-                            That&apos;s why Exitable is looking for a solution: a
-                            hybrid stack. My assignment is to research and
+                            That&apos;s why Exitable is looking for a solution:
+                            a hybrid stack. My assignment is to research and
                             validate that approach as a reusable blueprint for
                             future projects.
                         </p>
