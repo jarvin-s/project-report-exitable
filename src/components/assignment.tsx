@@ -72,10 +72,7 @@ export default function Assignment() {
                         <p className='px-2 text-lg md:px-0 md:text-left'>
                             For my internship at Exitable, I will research and
                             build a modern, headless frontend solution that
-                            communicates with Craft CMS via GraphQL. I will
-                            also explore a frontend solution that fits
-                            Exitable&apos;s requirements, using CMS Starter as
-                            the API layer.
+                            communicates with Craft CMS via GraphQL.
                         </p>
                     </div>
 
@@ -85,12 +82,12 @@ export default function Assignment() {
                         </h2>
                         <p className='px-2 text-lg mb-4 md:px-0 md:text-left'>
                             Exitable currently builds websites in two ways:
-                            Content-driven sites use Craft CMS as a monolith
+                            content-driven sites use Craft CMS as a monolith
                             with TypeScript and Twig, focused on design, SEO and
                             content management. Headless webapps use Laravel
                             with Vue or Nuxt: separate frontend and backend apps
                             connected through a REST API, suited for complex
-                            workflows like advanced calculators.
+                        workflows like advanced calculators.
                         </p>
                         <p className='px-2 text-lg mb-4 md:px-0 md:text-left'>
                             More and more Exitable gets clients that want a

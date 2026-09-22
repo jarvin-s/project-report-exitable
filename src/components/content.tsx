@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react'
 import { createTimeline, stagger } from 'animejs'
 import { onScroll } from 'animejs/events'
-import Image from 'next/image'
 import Link from 'next/link'
 
 const sections = [

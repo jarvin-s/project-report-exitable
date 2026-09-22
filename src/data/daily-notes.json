@@ -1,0 +1,8 @@
+{
+    "2026-08-31": "First day at Exitable. Got introduced to the team, set up my workstation, and reviewed the project proposal for the headless Craft CMS frontend.",
+    "2026-09-01": "Explored the existing Craft CMS monolith setup and CMS Starter. Started reading up on GraphQL in Craft.",
+    "2026-09-02": "Set up a local Craft CMS instance and ran my first GraphQL queries against sample content.",
+    "2026-09-03": "Explored the existing Craft CMS monolith setup and CMS Starter. Started reading up on GraphQL in Craft.",
+    "2026-09-15": "Mid-month check-in with my supervisor. Discussed the hybrid stack approach and defined the first proof-of-concept milestones.",
+    "2026-10-01": "Started scaffolding the Next.js frontend and connected it to Craft via GraphQL for the first time."
+}
