@@ -69,7 +69,7 @@ export default function Reflection() {
                     </h2>
                     <div
                         aria-live='polite'
-                        className='mt-10 rounded-lg border border-[#ececec] bg-white p-6 shadow-sm'
+                        className='mt-8 rounded-md border border-[#ececec] bg-white p-6 shadow-sm'
                     >
                         {selectedDateKey ? (
                             <>

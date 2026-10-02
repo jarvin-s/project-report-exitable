@@ -12,7 +12,7 @@ export default function Hero() {
 
     useEffect(() => {
         const gradient = new Gradient()
-        // @ts-ignore
+        // @ts-expect-error - Gradient is not typed
         gradient.initGradient('#gradient-canvas')
     }, [])
 
