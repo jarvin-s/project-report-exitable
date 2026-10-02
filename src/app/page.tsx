@@ -14,6 +14,7 @@ export default function Home() {
             <Content />
             <Spacer />
             <Assignment />
+            <Spacer />
             <Description />
             <ConclusionRecommendation />
             <Reflection />
