@@ -69,7 +69,7 @@ export default function Reflection() {
                     </h2>
                     <div
                         aria-live='polite'
-                        className='mt-8 rounded-md border border-[#ececec] bg-white p-6 shadow-sm'
+                        className='mt-8 rounded-md border border-[#ececec] bg-white p-6'
                     >
                         {selectedDateKey ? (
                             <>
@@ -80,7 +80,7 @@ export default function Reflection() {
                                 </h3>
                                 <p className='mt-4 text-lg leading-relaxed'>
                                     {selectedNote ??
-                                        'No note for this day yet. Add one in daily-notes.json using the date key YYYY-MM-DD.'}
+                                        'No note for this day yet.'}
                                 </p>
                             </>
                         ) : (
