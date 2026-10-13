@@ -40,6 +40,21 @@ export default function Reflection() {
     const [selectedDateKey, setSelectedDateKey] = useState<string | null>(
         () => daysWithNotes.values().next().value ?? null
     )
+    const [openMonths, setOpenMonths] = useState<Set<string>>(() => new Set())
+
+    function toggleMonth(label: string) {
+        setOpenMonths((current) => {
+            const next = new Set(current)
+
+            if (next.has(label)) {
+                next.delete(label)
+            } else {
+                next.add(label)
+            }
+
+            return next
+        })
+    }
 
     const selectedNote =
         selectedDateKey !== null ? dailyNotes[selectedDateKey] : undefined
@@ -78,7 +93,7 @@ export default function Reflection() {
                                         new Date(`${selectedDateKey}T12:00:00`)
                                     )}
                                 </h3>
-                                <p className='mt-4 text-lg leading-relaxed'>
+                                <p className='mt-4 text-base leading-relaxed'>
                                     {selectedNote ??
                                         'No note for this day yet.'}
                                 </p>
@@ -90,45 +105,65 @@ export default function Reflection() {
                         )}
                     </div>
 
-                    <div className='mt-4 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3'>
-                        {months.map(({ label, days }) => (
-                            <div key={label}>
-                                <h3 className='text-lg font-bold text-[#ff631c]'>
-                                    {label}
-                                </h3>
-                                <div className='mt-3 flex flex-wrap gap-2'>
-                                    {days.map((day) => {
-                                        const dateKey = toDateKey(day)
-                                        const hasNote =
-                                            daysWithNotes.has(dateKey)
-                                        const isSelected =
-                                            selectedDateKey === dateKey
+                    <div className='mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
+                        {months.map(({ label, days }) => {
+                            const isOpen = openMonths.has(label)
 
-                                        return (
-                                            <button
-                                                key={dateKey}
-                                                type='button'
-                                                onClick={() =>
-                                                    setSelectedDateKey(dateKey)
-                                                }
-                                                aria-pressed={isSelected}
-                                                aria-label={formatDayLabel(day)}
-                                                className={[
-                                                    'flex h-10 min-w-10 items-center justify-center rounded-full border px-2 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-[#ff631c] focus-visible:ring-offset-2 focus-visible:outline-none',
-                                                    isSelected
-                                                        ? 'border-[#ff631c] bg-[#ff631c] text-white'
-                                                        : hasNote
-                                                          ? 'border-[#ff631c] bg-[#fff4ef] text-[#ff631c] hover:bg-[#ff631c] hover:text-white'
-                                                          : 'border-[#d9d9d9] bg-white text-[#0b0b0b] hover:border-[#ff631c] hover:text-[#ff631c]',
-                                                ].join(' ')}
-                                            >
-                                                {day.getDate()}
-                                            </button>
-                                        )
-                                    })}
+                            return (
+                                <div key={label}>
+                                    <button
+                                        type='button'
+                                        aria-expanded={isOpen}
+                                        onClick={() => toggleMonth(label)}
+                                        className='flex w-full cursor-pointer items-center justify-between gap-3 text-left text-lg font-bold text-[#ff631c] focus-visible:ring-2 focus-visible:ring-[#ff631c] focus-visible:ring-offset-2 focus-visible:outline-none'
+                                    >
+                                        {label}
+                                        <span aria-hidden='true'>
+                                            {isOpen ? '-' : '+'}
+                                        </span>
+                                    </button>
+                                    {isOpen ? (
+                                        <div className='mt-3 flex flex-wrap gap-2'>
+                                            {days.map((day) => {
+                                                const dateKey = toDateKey(day)
+                                                const hasNote =
+                                                    daysWithNotes.has(dateKey)
+                                                const isSelected =
+                                                    selectedDateKey === dateKey
+
+                                                return (
+                                                    <button
+                                                        key={dateKey}
+                                                        type='button'
+                                                        onClick={() =>
+                                                            setSelectedDateKey(
+                                                                dateKey
+                                                            )
+                                                        }
+                                                        aria-pressed={
+                                                            isSelected
+                                                        }
+                                                        aria-label={formatDayLabel(
+                                                            day
+                                                        )}
+                                                        className={[
+                                                            'flex h-8 min-w-8 items-center justify-center rounded-full border px-2 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-[#ff631c] focus-visible:ring-offset-2 focus-visible:outline-none',
+                                                            isSelected
+                                                                ? 'border-[#ff631c] bg-[#ff631c] text-white'
+                                                                : hasNote
+                                                                  ? 'border-[#ff631c] bg-[#fff4ef] text-[#ff631c] hover:bg-[#ff631c] hover:text-white'
+                                                                  : 'border-[#d9d9d9] bg-white text-[#0b0b0b] hover:border-[#ff631c] hover:text-[#ff631c]',
+                                                        ].join(' ')}
+                                                    >
+                                                        {day.getDate()}
+                                                    </button>
+                                                )
+                                            })}
+                                        </div>
+                                    ) : null}
                                 </div>
-                            </div>
-                        ))}
+                            )
+                        })}
                     </div>
                 </div>
             </div>

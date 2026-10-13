@@ -6,13 +6,10 @@ import { onScroll } from 'animejs/events'
 import Link from 'next/link'
 
 const sections = [
-    { href: '#assignment', label: 'The Assignment' },
-    { href: '#description', label: 'Description' },
-    {
-        href: '#conclusion',
-        label: 'Conclusion',
-    },
-    { href: '#reflection', label: 'Personal Reflection' },
+    { href: '/#assignment', label: 'The Assignment' },
+    { href: '/description', label: 'Description' },
+    { href: '/conclusion', label: 'Conclusion' },
+    { href: '/reflection', label: 'Personal Reflection' },
 ] as const
 
 export default function Content() {

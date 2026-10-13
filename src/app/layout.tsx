@@ -1,7 +1,7 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { DM_Sans, Anton } from 'next/font/google'
 import './globals.css'
-import Head from 'next/head'
+import Navbar from '@/components/navbar'
 
 const dmSans = DM_Sans({
     subsets: ['latin'],
@@ -19,20 +19,21 @@ export const metadata: Metadata = {
     description: "Jarvin's Project Report for the internship at Exitable",
 }
 
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
+}
+
 export default function RootLayout({ children }: LayoutProps<'/'>) {
     return (
         <html
             lang='en'
             className={`${dmSans.className} ${anton.variable} scroll-smooth`}
-            suppressHydrationWarning={true}
         >
-            <Head>
-                <meta
-                    name='viewport'
-                    content='width=device-width, initial-scale=1.0'
-                />
-            </Head>
-            <body>{children}</body>
+            <body>
+                <Navbar />
+                {children}
+            </body>
         </html>
     )
 }
