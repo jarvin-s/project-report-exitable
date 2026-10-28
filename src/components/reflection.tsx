@@ -123,7 +123,7 @@ export default function Reflection() {
                                         </span>
                                     </button>
                                     {isOpen ? (
-                                        <div className='mt-3 flex flex-wrap gap-2'>
+                                        <div className='mt-3 grid grid-cols-5 gap-2'>
                                             {days.map((day) => {
                                                 const dateKey = toDateKey(day)
                                                 const hasNote =
@@ -147,7 +147,7 @@ export default function Reflection() {
                                                             day
                                                         )}
                                                         className={[
-                                                            'flex h-8 min-w-8 items-center justify-center rounded-full border px-2 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-[#ff631c] focus-visible:ring-offset-2 focus-visible:outline-none',
+                                                            'flex aspect-square w-full min-w-0 items-center justify-center rounded-full border p-0 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-[#ff631c] focus-visible:ring-offset-2 focus-visible:outline-none',
                                                             isSelected
                                                                 ? 'border-[#ff631c] bg-[#ff631c] text-white'
                                                                 : hasNote
